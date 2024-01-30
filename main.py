@@ -11,7 +11,7 @@ def execute_and_save(function_name, gait_analysis, filename, data_type, function
     return gait_analysis
 
 def perform_gait_analysis():
-    subjects = ['P12','P11', 'P10','P09','P08']
+    subjects = ['P12']
     conditions = ['noRAC_slowWalk']
     # conditions = ['noRAC_slowWalk', 'noRAC_preferredWalk', 'noRAC_fastWalk']
 
@@ -54,11 +54,11 @@ def perform_gait_analysis():
 
 def main():
     ########Perform gait analysis
-    # perform_gait_analysis()
+    perform_gait_analysis()
 
     # Clustering synergies
     synergy_cluster = SynergyClustering(n_clusters=5)
-    subjects = ['P09','P10','P11','P12']
+    subjects = ['P12','P11']
     conditions = ['noRAC_slowWalk']#, 'noRAC_preferredWalk', 'noRAC_fastWalk']
     synergy_cluster.load_synergies(subjects, conditions)
 
